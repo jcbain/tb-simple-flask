@@ -2,6 +2,7 @@ services:
   flask:
     image: tugboatqa/python:3
     default: true
+    subpath: true
     expose: 5000
 
     commands:
