@@ -1,0 +1,11 @@
+services:
+  flask:
+    image: tugboatqa/python:3
+    default: true
+    expose: 5000
+
+    commands:
+      build:
+        - pip3 install -r "${TUGBOAT_ROOT}/requirements.txt"
+      start:
+        - python3 -m flask run--host=0.0.0.0 &
